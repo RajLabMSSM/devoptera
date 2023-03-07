@@ -1,0 +1,43 @@
+---
+title: ""  
+author: "`r rworkflows::use_badges(add_doi = '10.1093/bioinformatics/btab658')`"
+output:
+  github_document
+---
+
+```{r, echo=FALSE, include=FALSE}
+pkg <- read.dcf("DESCRIPTION", fields = "Package")[1]
+description <- read.dcf("DESCRIPTION", fields = "Description")[1]
+```
+ 
+## ``r pkg``: `r gsub("echoverse module: ","", description)`
+
+This R package is part of the *echoverse* suite that supports [`echolocatoR`](https://github.com/RajLabMSSM/echolocatoR):
+an automated genomic fine-mapping pipeline. 
+
+If you use ``r pkg``, please cite: 
+
+> `r citation(pkg)$textVersion`
+
+## Installation 
+
+```R
+if(!require("remotes")) install.packages("remotes")
+
+remotes::install_github("RajLabMSSM/`r pkg`")
+library(`r pkg`)
+```
+## Documentation 
+
+### [Website](https://rajlabmssm.github.io/`r pkg`) 
+### [Get started](https://rajlabmssm.github.io/`r pkg`/articles/`r pkg`) 
+
+<hr>
+
+## Contact
+
+<a href="https://bschilder.github.io/BMSchilder/" target="_blank">Brian
+M. Schilder, Bioinformatician II</a>  
+<a href="https://rajlab.org" target="_blank">Raj Lab</a>  
+<a href="https://icahn.mssm.edu/about/departments/neuroscience" target="_blank">Department
+of Neuroscience, Icahn School of Medicine at Mount Sinai</a>  
