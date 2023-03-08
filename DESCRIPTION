@@ -1,6 +1,6 @@
-Package: echoverseTemplate
+Package: devoptera
 Type: Package
-Title: echoverse module: echoversePackageTitle
+Title: Practical Tools for R Developers
 Version: 0.99.0
 Authors@R: 
     c(person(given = "Brian",
@@ -19,26 +19,35 @@ Authors@R:
            email = "towfique.raj@mssm.edu",
            comment = c(ORCID = "0000-0002-9355-5704"))
            ) 
-Description: echoverse module: echoversePackageDescription.
-URL: https://github.com/RajLabMSSM/echoverseTemplate
-BugReports: https://github.com/RajLabMSSM/echoverseTemplate/issues
+Description: echoverse module: Practical tools for R developers.
+URL: https://github.com/RajLabMSSM/devoptera
+BugReports: https://github.com/RajLabMSSM/devoptera/issues
 Encoding: UTF-8
-Depends: R (>= 4.1)
+Depends: R (>= 4.2)
 biocViews:
-    Software, Genetics, FunctionalGenomics, SystemsBiology
+  Software, 
+  Genetics, 
+  FunctionalGenomics, 
+  SystemsBiology
 Imports:
+  rlang,
+  devtools,
+  BiocCheck,
+  methods,
+  here,
+  data.table,
+  rstudioapi
 Suggests:
-    rworkflows,
-    markdown,
-    rmarkdown,
-    remotes,
-    knitr,
-    BiocStyle,
-    covr,
-    testthat (>= 3.0.0),
-    utils,
-    rlang,
-    methods
+  rworkflows,
+  rmarkdown, 
+  testthat, 
+  covr,
+  BiocStyle,
+  ggimage, 
+  ggplot2, 
+  knitr, 
+  markdown,
+  hexSticker
 RoxygenNote: 7.2.3
 VignetteBuilder: knitr
 License: GPL-3

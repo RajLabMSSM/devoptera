@@ -1,0 +1,65 @@
+---
+title: echoverse hex stickers
+author: '<h4>Authors: <i>`r auths <- eval(parse(text = gsub("person","c",read.dcf("../DESCRIPTION",
+  fields = "Authors@R"))));paste(auths[names(auths)=="given"],auths[names(auths)=="family"],
+  collapse = ", ")`</i></h4>'
+date: '<h4>Vignette updated: <i>`r format( Sys.Date(), "%b-%d-%Y")`</i></h4>'
+output: BiocStyle::html_document
+vignette: |
+  %\VignetteIndexEntry{devoptera}
+   %\usepackage[utf8]{inputenc}
+  %\VignetteEngine{knitr::rmarkdown}
+---
+
+
+```{r, echo=FALSE, include=FALSE}
+pkg <- read.dcf("../DESCRIPTION", fields = "Package")[1]
+library(pkg, character.only = TRUE)
+```
+
+
+```R
+library(`r pkg`)
+```
+
+# Make hex
+
+`devoptera::make_hex` is a helper function that generates an `echoverse`-themed hex sticker using a built-in template.
+
+```{r}
+hex <- devoptera::make_hex(pkg = "devoptera", 
+                           save_path = tempfile(fileext = "hex.png"))
+```
+
+# Show hex
+
+By default, it saves the sticker at *inst/hex/hex.png*. Once it's been created, you can push it to the package's GitHub repository.
+
+This will then be detected automatically by `rworkflows::use_badges()` when the argument `use_hex=TRUE`.
+
+```{r}
+rworkflows::use_badges(ref = "RajLabMSSM/devoptera",
+                       add_hex = TRUE)
+```
+
+
+## Further customisation
+
+For more customised hex stickers, you can make awesome hex stickers for your R packages using:
+
+- [hexSticker](https://github.com/GuangchuangYu/hexSticker)  
+- [ggimage](https://github.com/GuangchuangYu/ggimage) 
+lets you render images as data points.  
+- [ggpattern](https://coolbutuseless.github.io/package/ggpattern/)
+lets you fill objects with patterns or images.
+- [magick](https://cran.r-project.org/web/packages/magick/vignettes/intro.html) 
+modify PNGs.
+
+# Session Info 
+
+<details> 
+```{r Session Info}
+devoptera::session_info()
+```
+</details>   
+<hr>

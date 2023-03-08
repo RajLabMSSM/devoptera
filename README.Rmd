@@ -32,6 +32,23 @@ library(`r pkg`)
 ### [Website](https://rajlabmssm.github.io/`r pkg`) 
 ### [Get started](https://rajlabmssm.github.io/`r pkg`/articles/`r pkg`) 
 
+## Name 
+
+<details>
+<summary><strong>&#129415; So what does <code>devoptera</code> mean, anyways?</strong> (click to find out)</summary>
+
+[__DevOps__](https://en.wikipedia.org/wiki/DevOps) is a software engineering
+methodology that is itself an amalgam of software **Dev**lopment and 
+IT **Op**eration**s**.
+
+**Chiroptera** is a the name of the phylogenetic order to which bats belong.
+`devoptera` is part of the broader *echoverse* suite that supports 
+[`echolocatoR`](https://github.com/RajLabMSSM/echolocatoR), and 
+`echolocatoR` is an R package that facilitates fine-mapping to pinpoint 
+causal genetic variants underlying complex traits.
+You know, like bats do (kind of). :cricket::wavy_dash::bat:
+</details>
+
 <hr>
 
 ## Contact
@@ -41,3 +58,12 @@ M. Schilder, Bioinformatician II</a>
 <a href="https://rajlab.org" target="_blank">Raj Lab</a>  
 <a href="https://icahn.mssm.edu/about/departments/neuroscience" target="_blank">Department
 of Neuroscience, Icahn School of Medicine at Mount Sinai</a>  
+ 
+# Session info
+
+<details> 
+```{r Session Info}
+devoptera::session_info()
+```
+</details>   
+<hr> 

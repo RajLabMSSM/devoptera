@@ -1,0 +1,146 @@
+---
+title: Get started
+author: '<h4>Authors: <i>`r auths <- eval(parse(text = gsub("person","c",read.dcf("../DESCRIPTION",
+  fields = "Authors@R"))));paste(auths[names(auths)=="given"],auths[names(auths)=="family"],
+  collapse = ", ")`</i></h4>'
+date: '<h4>Vignette updated: <i>`r format( Sys.Date(), "%b-%d-%Y")`</i></h4>'
+output: BiocStyle::html_document
+vignette: |
+  %\VignetteIndexEntry{echoverseTemplate}
+   %\usepackage[utf8]{inputenc}
+  %\VignetteEngine{knitr::rmarkdown}
+---
+
+
+```{r setup, echo=FALSE, include=FALSE}
+pkg <- read.dcf("../DESCRIPTION", fields = "Package")[1]
+library(pkg, character.only = TRUE)
+```
+
+```R
+library(`r pkg`)
+```
+
+# Development workflow
+
+Here, we show how `devoptera` can be used to greatly accelerate your R package development workflow.
+
+## `source_all`
+
+Let's say you have many functions in your *R* folder and want to have access to them all without having to write out the `pkg:::internal_func` notation. You can source all the functions at once by running `devoptera::source_all`.
+
+Thus function can also load any R packages you need by supplying the 
+package names to the 
+
+```{r}
+devoptera::source_all(packages = c("rlang","data.table"))
+```
+
+
+## `args2vars`
+
+As a developer, how often do you find yourself realizing there's a bug somewhere inside your function. You could:
+
+* **`Strategy 2`: Edit --> Rebuild --> Repeat**: Make a change to the code, rebuild the package, and rerun the function as a whole. This most closely mimics how it will run in production, but is extremely slow when iterating this edit-rebuild process many, many times over.
+* **`Strategy 2`:Run internal code line-by-line**: Alternatively, you could go within your function, run one line of code at a time and inspect the variables it produces at each step. This is much faster than guessing whether your changes fixed the bug and rebuilding each time to find out whether they worked. But in order to do this, you first need to initialise each argument in your function as a global variable so that you can run the code line-by-line. But your function has many arguments, so now you spend the next minute(s) tediously making each argument into a variable of the same name (using the defaults as the assigned values).
+
+`devoptera::args2vars` automates `Strategy 2` by first running `source_all` (from previous example) and then automatically assigning each of your function's arguments as global variables in your R environment.
+Voila! No more tedious argument defining, allowing you to rapidly debug your code before going to rebuild the entire package.
+
+### Define a function 
+
+Here we define an arbitrary function with 3 arguments.
+If your function is already in one of your source files (i.e. a *.R* file within the *R/* subfolder), you can skip this step. 
+
+```{r}
+myfunc <- function(a=1, b=2, c=a+b){
+  return(list(a,b,c))
+}
+```
+
+### Convert arguments to variables
+
+Now we will convert all the default arguments of `myfunc` to global variables. It also returns a named list with each variable's assigned value.
+
+```{r}
+args <- devoptera::args2vars(myfunc)
+args
+```
+
+
+After debugging your code, you can now proceed to the next steps.
+
+### Clear
+
+Remove all variables using `devoptera::rma()`, 
+or by clicking the little broom :broom: in the upper right of your `Environment` panel in RStudio.
+
+This is important as it will ensure that the names of functions/variables in your global environment (created with `source_all`/`args2vars`) don't override the functions/variables within your reinstalled package (in the next step).
+
+```{r}
+devoptera::rma()
+```
+
+### Reinstall
+
+(Re)install your package with `devoptera::install` (imported directly from `devtools::install`), 
+or by clicking the `Install` button within the `Build` panel in RStudio.
+
+This function is equivalent to the keystrokes `CMD`+`SHIFT`+`B` within RStudio.
+
+```{r, eval=FALSE}
+install()
+```
+
+### Check
+
+Now you can recheck your package as usual to make sure everything runs as expected. 
+
+#### [CRAN](https://cran.r-project.org/) checks
+
+This `check` function is directly imported from `r `BiocStyle::CRANpkg('devtools')`.
+
+This function is equivalent to the keystrokes `CMD`+`SHIFT`+`E` within RStudio.
+
+```{r, eval=FALSE}
+check()
+```
+
+#### [Bioconductor](https://bioconductor.org/) checks
+
+This `BiocCheck` function is directly imported from `r `Biocpkg::CRANpkg('BiocCheck')`.
+
+```{r, eval=FALSE}
+BiocCheck()
+```
+
+
+If you still run into some bugs or unexpected behaviour, don't worry! 
+You can still easily go back and repeat this process until everything is working smoothly.
+
+# Extra functions
+
+## Restarting R
+
+Restarting your R session can be helpful or necessary in a variety of situations. Not only does it clear your variables, it unloads all packages which is necessary when you want to use a package you just installed a new version of. 
+
+This function is equivalent to the keystrokes `CMD`+`SHIFT`+`0` within RStudio.
+
+```{r, eval=FALSE}
+devoptera::restart()
+```
+
+ 
+
+# Session Info 
+
+It is best practice to always include your R Session Info in any Rmarkdown report or vignette. It contains information about which OS, R version, and R package versions you generated the report with.
+
+`devoptera::session_info` provides a collapsible version of the Session Info, which can be helpful when Session Info is particularly long.
+
+<details> 
+```{r Session Info}
+devoptera::session_info()
+```
+</details>   
+<hr>
