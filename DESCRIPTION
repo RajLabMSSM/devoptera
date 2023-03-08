@@ -49,6 +49,8 @@ Suggests:
   markdown,
   hexSticker,
   R.utils
+Remotes:
+  github::neurogenomics/rworkflows
 RoxygenNote: 7.2.3
 VignetteBuilder: knitr
 License: GPL-3

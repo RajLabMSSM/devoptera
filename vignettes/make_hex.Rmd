@@ -37,7 +37,7 @@ By default, it saves the sticker at *inst/hex/hex.png*. Once it's been created, 
 
 This will then be detected automatically by `rworkflows::use_badges()` when the argument `use_hex=TRUE`.
 
-```{r}
+```{r, results='asis'}
 rworkflows::use_badges(ref = "RajLabMSSM/devoptera",
                        add_hex = TRUE)
 ```
