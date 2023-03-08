@@ -1,0 +1,8 @@
+pandoc: 2.19.2
+pkgdown: 2.0.7
+pkgdown_sha: ~
+articles:
+  devoptera: devoptera.html
+  make_hex: make_hex.html
+last_built: 2023-03-08T23:21Z
+
