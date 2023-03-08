@@ -39,6 +39,7 @@ make_hex_echoverse <- function(pkg,
   # devoptera::args2vars(make_hex_echoverse)
   requireNamespace("ggplot2")
   requireNamespace("data.table")
+  requireNamespace("R.utils")
   # If you're using R<4.1.1, need this version of rvcheck
   # devtools::install_version('rvcheck',version='0.1.8') 
   requireNamespace("ggimage")

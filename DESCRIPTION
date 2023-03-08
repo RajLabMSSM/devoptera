@@ -47,7 +47,8 @@ Suggests:
   ggplot2, 
   knitr, 
   markdown,
-  hexSticker
+  hexSticker,
+  R.utils
 RoxygenNote: 7.2.3
 VignetteBuilder: knitr
 License: GPL-3
