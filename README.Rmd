@@ -35,7 +35,7 @@ library(`r pkg`)
 ## Name 
 
 <details>
-<summary><strong>&#129415; So what does <code>devoptera</code> mean, anyways?</strong> (click to find out)</summary>
+<summary><strong>&#x2753;&#129415;&#x2753; So what does <code>devoptera</code> mean, anyways?</strong> (click to find out)</summary>
 
 [__DevOps__](https://en.wikipedia.org/wiki/DevOps) is a software engineering
 methodology that is itself an amalgam of software **Dev**lopment and 
@@ -45,7 +45,8 @@ IT **Op**eration**s**.
 `devoptera` is part of the broader *echoverse* suite that supports 
 [`echolocatoR`](https://github.com/RajLabMSSM/echolocatoR), and 
 `echolocatoR` is an R package that facilitates fine-mapping to pinpoint 
-causal genetic variants underlying complex traits.
+causal genetic variants underlying complex traits.  
+
 You know, like bats do (kind of). :cricket::wavy_dash::bat:
 </details>
 
