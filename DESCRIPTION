@@ -23,7 +23,7 @@ Description: echoverse module: Practical tools for R developers.
 URL: https://github.com/RajLabMSSM/devoptera
 BugReports: https://github.com/RajLabMSSM/devoptera/issues
 Encoding: UTF-8
-Depends: R (>= 4.2)
+Depends: R (>= 4.1)
 biocViews:
   Software, 
   Genetics, 
