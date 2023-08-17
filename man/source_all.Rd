@@ -21,9 +21,10 @@ source_all(
 
 \item{envir}{an \R object specifying the environment in which the
     expressions are to be evaluated.  May also be a list or an integer.
-    The default value \code{NULL} corresponds to evaluation in the base
+    The default \code{\link[base]{baseenv}()} corresponds to evaluation in the base
     environment.  This is probably not what you want; you should
-    typically supply an explicit \code{envir} argument.}
+    typically supply an explicit \code{envir} argument, see the
+    \sQuote{Note}.}
 
 \item{...}{Additional arguments passed to \link[base]{sys.source}.}
 }

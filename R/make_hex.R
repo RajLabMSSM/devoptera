@@ -68,7 +68,7 @@ make_hex <- function(pkg = read.dcf(here::here("DESCRIPTION"),
     #### Subplot #####
     s_x=s_x, s_y=s_y,  s_height = s_height, s_width = s_width,
     #### Fill & border ####
-    h_fill = h_fill, h_color = h_color, #56ffff
+    h_fill = h_fill, h_color = h_color,
     #### Spotlight ####
     spotlight = spotlight, l_alpha = l_alpha, l_width = l_width,
     #### File output ####
@@ -76,6 +76,5 @@ make_hex <- function(pkg = read.dcf(here::here("DESCRIPTION"),
   #### Print plot ####
   if(isTRUE(show_plot)) methods::show(stick)
   #### Return ####
-  return(stick)
-  
+  return(stick) 
 }
