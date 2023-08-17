@@ -35,8 +35,6 @@ make_hex(
 
 \item{subtitle}{Hex sticker subtitle.}
 
-\item{subplot}{subplot}
-
 \item{save_path}{Path to save the hex sticker to.}
 
 \item{new_coords}{Generate new random x/y coordinates to position the bats in 
@@ -46,34 +44,8 @@ the background along.}
 
 \item{gradient}{Two colors to use to create a gradient for coloring the bats.}
 
-\item{p_size}{font size for package name}
-
-\item{p_x}{x position for package name}
-
-\item{p_y}{y position for package name}
-
 \item{s_size}{Convenience argument for controlled both 
 \code{s_height} and \code{s_width} at the same time.}
-
-\item{s_x}{x position for subplot}
-
-\item{s_y}{y position for subplot}
-
-\item{s_height}{height for subplot}
-
-\item{s_width}{width for subplot}
-
-\item{h_fill}{color to fill hexagon}
-
-\item{h_color}{color for hexagon border}
-
-\item{spotlight}{whether add spotlight}
-
-\item{l_alpha}{maximum alpha for spotlight}
-
-\item{l_width}{width for spotlight}
-
-\item{dpi}{plot resolution}
 
 \item{seed}{Random seed to make point coordinates reproducible 
 (only relevant when \code{new_coords=TRUE}).}
