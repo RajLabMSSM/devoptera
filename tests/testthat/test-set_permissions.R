@@ -4,7 +4,7 @@ test_that("set_permissions works", {
   writeLines(text = letters, con = f)
   set_permissions(f)
   
-  testthat::expect_equal(as.character(file.info(f)$mode), "777") 
+  testthat::expect_true(as.character(file.info(f)$mode) %in% c("777","666")) 
   
   testthat::expect_error(
     set_permissions(f, sudo = TRUE)

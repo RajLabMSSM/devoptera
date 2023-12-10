@@ -11,7 +11,7 @@ status](https://github.com/RajLabMSSM/devoptera/workflows/rworkflows/badge.svg)]
 <br>
 <a href='https://app.codecov.io/gh/RajLabMSSM/devoptera/tree/master' target='_blank'><img src='https://codecov.io/gh/RajLabMSSM/devoptera/branch/master/graphs/icicle.svg' title='Codecov icicle graph' width='200' height='50' style='vertical-align: top;'></a>  
 <h4>  
-Authors: <i>Brian Schilder, Jack Humphrey, Towfique Raj</i>  
+Authors: <i>Brian Schilder</i>  
 </h4>
 
 ## `devoptera`: Practical tools for R developers.
@@ -118,7 +118,7 @@ devoptera::session_info()
     ##  DBI             1.1.3      2022-06-18 [1] CRAN (R 4.3.0)
     ##  dbplyr          2.4.0      2023-10-26 [1] CRAN (R 4.3.1)
     ##  desc            1.4.2      2022-09-08 [1] CRAN (R 4.3.0)
-    ##  devoptera       0.99.0     2023-12-10 [1] Bioconductor
+    ##  devoptera       0.99.1     2023-12-10 [1] Bioconductor
     ##  devtools        2.4.5      2022-10-11 [1] CRAN (R 4.3.0)
     ##  digest          0.6.33     2023-07-07 [1] CRAN (R 4.3.0)
     ##  dlstats         0.1.7      2023-05-24 [1] CRAN (R 4.3.0)

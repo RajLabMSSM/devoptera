@@ -7,17 +7,7 @@ Authors@R:
            family = "Schilder",
            role = c("aut","cre"),
            email = "brian_schilder@alumni.brown.edu",
-           comment = c(ORCID = "0000-0001-5949-2191")),
-    person(given = "Jack",
-           family = "Humphrey",
-           role = c("aut"),
-           email = "Jack.Humphrey@mssm.edu",
-           comment = c(ORCID = "0000-0002-6274-6620")),
-    person(given = "Towfique",
-           family = "Raj",
-           role = c("aut"),
-           email = "towfique.raj@mssm.edu",
-           comment = c(ORCID = "0000-0002-9355-5704"))
+           comment = c(ORCID = "0000-0001-5949-2191"))
            ) 
 Description: echoverse module: Practical tools for R developers.
 URL: https://github.com/RajLabMSSM/devoptera

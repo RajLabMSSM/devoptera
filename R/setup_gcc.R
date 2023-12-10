@@ -16,7 +16,7 @@
 #' @import data.table
 #' @importFrom R.utils createLink
 #' @examples
-#' gcc_df <- setup_gcc(overwrite=FALSE) 
+#' if(interactive()) gcc_df <- setup_gcc(overwrite=FALSE) 
 setup_gcc <- function(version='latest',
                       link="/usr/local/bin/gcc",
                       sudo=FALSE,
@@ -37,12 +37,24 @@ setup_gcc <- function(version='latest',
                           pattern = "gcc@", 
                           full.names = TRUE)
   if(length(gcc_paths)==0){
-      stp <- paste(
-          "No valid version of gcc installed.",
-          "You can install it in the terminal using:",
-          "`brew install gcc@10`"
+    prelude <- paste(
+      "No valid version of gcc installed.",
+      "You can install it in the terminal using:",
+    )
+    if(get_os()=="mac"){
+      stp <- paste(prelude,
+                   "`brew install gcc@10`"
       )
-      stop(stp)
+    } else if(get_os()=="windows"){
+      stp <- paste(prelude,
+                   "`npm install gcc`"
+      )  
+    } else {
+      stp <- paste(prelude,
+                   "`sudo apt update && sudo apt install build-essential`"
+      ) 
+    } 
+    stop(stp)
   }
   version <- tolower(as.character(version))
   gcc_df <- data.table::data.table(

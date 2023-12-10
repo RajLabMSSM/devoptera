@@ -4,7 +4,10 @@
 \alias{get_os}
 \title{Get OS}
 \usage{
-get_os()
+get_os(lower = TRUE)
+}
+\arguments{
+\item{lower}{Make the OS string lowercase.}
 }
 \value{
 OS type as a character string.

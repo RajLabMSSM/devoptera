@@ -44,7 +44,7 @@ set_permissions <- function(path,
               verbose = verbose)
   }) 
   #### OS-specific commands ####
-  if(get_os()=="Windows"){
+  if(get_os()=="windows"){
       try({ 
         system(paste("icacls",
                      path,
@@ -55,7 +55,7 @@ set_permissions <- function(path,
                   )
         }
           )
-  } else if (get_os()=="Mac"){
+  } else if (get_os()=="mac"){
       try({
         system(paste(
           add_sudo(sudo = sudo, pass = pass),
@@ -65,7 +65,7 @@ set_permissions <- function(path,
           path)
           )
         })
-  } else if (get_os()=="Linux"){
+  } else if (get_os()=="linux"){
     try({
       system(paste(
         add_sudo(sudo = sudo, pass = pass),

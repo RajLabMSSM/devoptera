@@ -41,5 +41,5 @@ If this doesn't work, first try following
  \href{https://mac.r-project.org/tools/}{these instructions}.
 }
 \examples{
-gcc_df <- setup_gcc(overwrite=FALSE) 
+if(interactive()) gcc_df <- setup_gcc(overwrite=FALSE) 
 }
