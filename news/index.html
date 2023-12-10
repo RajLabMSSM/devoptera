@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">devoptera</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.99.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.99.1</span>
       </span>
     </div>
 
@@ -35,6 +35,9 @@
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu"><li>
+      <a href="../articles/docker.html">Docker/Singularity Containers</a>
+    </li>
+    <li>
       <a href="../articles/make_hex.html">echoverse hex stickers</a>
     </li>
   </ul></li>
@@ -61,9 +64,32 @@
     </div>
 
     <div class="section level2">
+<h2 class="page-header" data-toc-text="0.99.1" id="devoptera-0991">devoptera 0.99.1<a class="anchor" aria-label="anchor" href="#devoptera-0991"></a></h2>
+<div class="section level3">
+<h3 id="new-features-0-99-1">New features<a class="anchor" aria-label="anchor" href="#new-features-0-99-1"></a></h3>
+<ul><li>Update <em>rworkflows.yml</em>
+</li>
+<li>Add Docker vignette</li>
+<li>
+<code>args2vars</code>:
+<ul><li>add <code>set_dots</code> arg.</li>
+<li>Enable inference of <code>fn</code> arg from currently open file (default), R source file path, parent function, or explicit function.</li>
+</ul></li>
+<li>New exported functions:
+<ul><li><code>current_file</code></li>
+<li><code>list_functions</code></li>
+<li><code>stop_early</code></li>
+</ul></li>
+<li>Improve code coverage.</li>
+</ul></div>
+</div>
+    <div class="section level2">
 <h2 class="page-header" data-toc-text="0.99.0" id="devoptera-0990">devoptera 0.99.0<a class="anchor" aria-label="anchor" href="#devoptera-0990"></a></h2>
+<div class="section level3">
+<h3 id="new-features-0-99-0">New features<a class="anchor" aria-label="anchor" href="#new-features-0-99-0"></a></h3>
 <ul><li>Added a <code>NEWS.md</code> file to track changes to the package.</li>
 </ul></div>
+</div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -74,7 +100,7 @@
 
 
       <footer><div class="copyright">
-  <p></p><p>Developed by Brian Schilder, Jack Humphrey, Towfique Raj.</p>
+  <p></p><p>Developed by Brian Schilder.</p>
 </div>
 
 <div class="pkgdown">

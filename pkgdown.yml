@@ -3,6 +3,7 @@ pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
   devoptera: devoptera.html
+  docker: docker.html
   make_hex: make_hex.html
-last_built: 2023-08-17T11:05Z
+last_built: 2023-12-10T16:44Z
 
