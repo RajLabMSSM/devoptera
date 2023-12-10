@@ -6,7 +6,7 @@
 #' @export
 #' @examples
 #' testfun <- function(...) {stop_early(); message("Completed function."); 1}
-#' testfun()
+#' if(interactive()) testfun()
 stop_early <- function(msg="Exiting function early.") {
   opt <- options(show.error.messages = FALSE)
   on.exit(options(opt))
