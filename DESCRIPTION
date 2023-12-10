@@ -1,7 +1,7 @@
 Package: devoptera
 Type: Package
 Title: Practical Tools for R Developers
-Version: 0.99.0
+Version: 0.99.1
 Authors@R: 
     c(person(given = "Brian",
            family = "Schilder",
@@ -36,6 +36,7 @@ Imports:
   methods,
   here,
   data.table,
+  R.utils,
   rstudioapi
 Suggests:
   rworkflows,
@@ -47,8 +48,7 @@ Suggests:
   ggplot2, 
   knitr, 
   markdown,
-  hexSticker,
-  R.utils
+  hexSticker
 Remotes:
   github::neurogenomics/rworkflows
 RoxygenNote: 7.2.3

@@ -5,17 +5,32 @@
 \title{Set function argument defaults to global variables}
 \usage{
 args2vars(
-  fn,
+  fn = "current",
   remove = FALSE,
   envir = .GlobalEnv,
   reassign = FALSE,
   run_source_all = TRUE,
+  set_dots = NULL,
+  parent_fn = sys.function(sys.parent()),
   ...
 )
 }
 \arguments{
 \item{fn}{The function for which you want to convert its default
-argument values into global variables (e.g. \code{utils::packageDate}).}
+argument values into global variables.
+Can be one of:
+\itemize{
+\item{"current" or NULL (default)}{Identifies which file is currently active 
+within your Rstudio IDE. Then searches for any functions that are defined within 
+that file and runs \link{args2vars} on each of them. In this case, 
+the listed returned to the user will be nested by each function name.}
+\item{File path}{Works the same as "current" except the user can define which
+ R source file to search for functions within 
+ (e.g. \code{"path/to/file.R"}).}
+\item{\link[base]{function}}{A literal R function
+ (e.g. \code{function(x) x+1}), or \code{utils::packageDate}}
+\item{"parent"}{The function within which \link{args2vars} was called.}
+}}
 
 \item{remove}{If \code{TRUE}, will remove globals 
 assigned by \code{args2vars} (if supplying the same \code{fn} as before).
@@ -27,6 +42,11 @@ If the global does not exist, it will be skipped.}
 reassign its value anyway.}
 
 \item{run_source_all}{Source all R scripts first.}
+
+\item{set_dots}{Set the \code{...} variable to the value of \code{set_dots}.}
+
+\item{parent_fn}{The function within which \code{args2vars} was called.
+Only used when \code{fn="parent"}.}
 
 \item{...}{
   Arguments passed on to \code{\link[=source_all]{source_all}}

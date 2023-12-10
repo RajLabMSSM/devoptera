@@ -36,4 +36,13 @@ test_that("args2vars works", {
     message(arg)
     testthat::expect_false(exists(arg, envir = .GlobalEnv))
   }
+  
+  #### Test "parent" function ####
+  testfun <- function(x=1,y=2){
+    devoptera::args2vars(fn="parent", run_source_all = FALSE) 
+  }
+  args_parent <- testfun()
+  testthat::expect_equal(names(args_parent), c("x","y"))
+  testthat::expect_equal(args_parent$x, 1)
+  testthat::expect_equal(args_parent$y, 2) 
 })

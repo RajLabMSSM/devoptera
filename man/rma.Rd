@@ -9,7 +9,7 @@ rma(envir = .GlobalEnv, list = ls(pos = envir, envir = envir))
 \arguments{
 \item{envir}{the \code{\link[base]{environment}} to use.  See \sQuote{details}.}
 
-\item{list}{a character vector naming objects to be removed.}
+\item{list}{a character vector (or \code{\link[base]{NULL}}) naming objects to be removed.}
 }
 \value{
 Null
