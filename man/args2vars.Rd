@@ -8,7 +8,7 @@ args2vars(
   fn = "current",
   remove = FALSE,
   envir = .GlobalEnv,
-  reassign = FALSE,
+  reassign = TRUE,
   run_source_all = TRUE,
   set_dots = NULL,
   parent_fn = sys.function(sys.parent()),
