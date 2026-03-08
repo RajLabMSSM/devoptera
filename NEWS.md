@@ -1,3 +1,9 @@
+# devoptera 0.99.2
+
+## New features
+
+* Add `docker_registry: ghcr.io` to `rworkflows.yml` for GHCR Docker builds.
+
 # devoptera 0.99.1
 
 ## New features
