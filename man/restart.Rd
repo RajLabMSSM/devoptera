@@ -4,7 +4,7 @@
 \alias{restart}
 \title{Restart R}
 \usage{
-restart(command = deparse(substitute(cat(paste("🦇", "Welcome back!", "🦇")))))
+restart(command = deparse(substitute(cat(paste("Welcome back!")))))
 }
 \arguments{
 \item{command}{A command (as a string) to be run after restarting.}

@@ -12,7 +12,7 @@
 #' restart()
 #' }
 restart <- function(command=deparse(substitute(
-  cat(paste('\U0001F987','Welcome back!','\U0001F987'))
+  cat(paste('Welcome back!'))
 ))){ 
   rstudioapi::restartSession(command = command)
 }

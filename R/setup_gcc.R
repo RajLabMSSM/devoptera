@@ -39,7 +39,7 @@ setup_gcc <- function(version='latest',
   if(length(gcc_paths)==0){
     prelude <- paste(
       "No valid version of gcc installed.",
-      "You can install it in the terminal using:",
+      "You can install it in the terminal using:"
     )
     if(get_os()=="mac"){
       stp <- paste(prelude,

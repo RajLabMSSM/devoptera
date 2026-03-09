@@ -43,7 +43,14 @@ the background along.}
 
 \item{gradient}{Two colors to use to create a gradient for coloring the bats.}
 
-\item{family}{Font family}
+\item{family}{The typeface to use. The validity of this value will depend on
+the graphics device being used for rendering the plot. See
+\href{https://systemfonts.r-lib.org/articles/systemfonts.html}{the systemfonts vignette}
+for guidance on the best way to access fonts installed on your computer.
+The values \code{"sans"}, \code{"serif"}, and \code{"mono"} should always be valid and
+will select the default typeface for the respective styles. However, what
+is considered default is dependant on the graphics device and the operating
+system.}
 
 \item{p_size}{font size for package name}
 

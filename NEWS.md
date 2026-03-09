@@ -1,3 +1,8 @@
+# devoptera 0.99.3
+
+## Bug fixes
+* Local R CMD check fixes and compatibility updates.
+
 # devoptera 0.99.2
 
 ## New features

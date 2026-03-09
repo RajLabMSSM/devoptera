@@ -19,13 +19,13 @@ args2vars(
 \item{fn}{The function for which you want to convert its default
 argument values into global variables.
 Can be one of:
-\itemize{
-\item{"current" or NULL (default)}{Identifies which file is currently active 
-within your Rstudio IDE. Then searches for any functions that are defined within 
-that file and runs \link{args2vars} on each of them. In this case, 
+\describe{
+\item{"current" or NULL (default)}{Identifies which file is currently active
+within your Rstudio IDE. Then searches for any functions that are defined within
+that file and runs \link{args2vars} on each of them. In this case,
 the listed returned to the user will be nested by each function name.}
 \item{File path}{Works the same as "current" except the user can define which
- R source file to search for functions within 
+ R source file to search for functions within
  (e.g. \code{"path/to/file.R"}).}
 \item{\link[base]{function}}{A literal R function
  (e.g. \code{function(x) x+1}), or \code{utils::packageDate}}
