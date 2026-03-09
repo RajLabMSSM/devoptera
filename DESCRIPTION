@@ -1,7 +1,7 @@
 Package: devoptera
 Type: Package
 Title: Practical Tools for R Developers
-Version: 0.99.3
+Version: 1.99.3
 Date: 2026-03-08
 Authors@R: 
     c(person(given = "Brian",
