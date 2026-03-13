@@ -30,9 +30,9 @@ If you use `devoptera`, please cite:
 ## Installation
 
 ``` r
-if(!require("remotes")) install.packages("remotes")
+if(!require("BiocManager")) install.packages("BiocManager")
 
-remotes::install_github("RajLabMSSM/devoptera")
+BiocManager::install("RajLabMSSM/devoptera")
 library(devoptera)
 ```
 
