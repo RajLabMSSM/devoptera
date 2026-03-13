@@ -1,3 +1,10 @@
+# devoptera 1.0.0
+
+## Bug fixes
+
+* Fix Rd `\examples` formatting and `\dontrun{}` guards.
+* Add `Rplots.pdf` and `*.tbi` to `.gitignore`.
+
 # devoptera 0.99.3
 
 ## Bug fixes
