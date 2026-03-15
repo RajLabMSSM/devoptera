@@ -28,8 +28,8 @@ test_that("set_permissions sets permissions on a temp file", {
   set_permissions(f, verbose = FALSE)
 
   info_after <- file.info(f)
-  ## After set_permissions the file should have 777
-  testthat::expect_equal(as.character(info_after$mode), "777")
+  ## After set_permissions the file should have 777 (Unix) or 666 (Windows, no execute bit)
+  testthat::expect_true(as.character(info_after$mode) %in% c("777", "666"))
 })
 
 test_that("set_permissions works with is_folder=TRUE on a temp directory", {
