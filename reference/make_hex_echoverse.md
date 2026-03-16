@@ -1,0 +1,137 @@
+# Make hex: echoverse
+
+Make a hex sticker for the echoverse.
+
+## Usage
+
+``` r
+make_hex_echoverse(
+  pkg,
+  subtitle = "echoverse",
+  save_path = here::here("inst", "hex", "hex.png"),
+  new_coords = FALSE,
+  n_bats = 20,
+  gradient = c("#194f68", "#56ffff"),
+  family = "Aller_Rg",
+  p_size = 14,
+  p_x = 1,
+  p_y = 1.4,
+  s_size = 1,
+  s_x = 1,
+  s_y = 0.8,
+  s_height = s_size,
+  s_width = s_size,
+  h_fill = "#25355c",
+  h_color = "#41c6c8",
+  spotlight = TRUE,
+  l_alpha = 0.3,
+  l_width = 10,
+  dpi = 300,
+  seed = 1234
+)
+```
+
+## Arguments
+
+- pkg:
+
+  Package name.
+
+- subtitle:
+
+  Hex sticker subtitle.
+
+- save_path:
+
+  Path to save the hex sticker to.
+
+- new_coords:
+
+  Generate new random x/y coordinates to position the bats in the
+  background along.
+
+- n_bats:
+
+  The number of bats you want to plot in the background.
+
+- gradient:
+
+  Two colors to use to create a gradient for coloring the bats.
+
+- family:
+
+  The typeface to use. The validity of this value will depend on the
+  graphics device being used for rendering the plot. See [the
+  systemfonts
+  vignette](https://systemfonts.r-lib.org/articles/systemfonts.html) for
+  guidance on the best way to access fonts installed on your computer.
+  The values `"sans"`, `"serif"`, and `"mono"` should always be valid
+  and will select the default typeface for the respective styles.
+  However, what is considered default is dependant on the graphics
+  device and the operating system.
+
+- p_size:
+
+  font size for package name
+
+- p_x:
+
+  x position for package name
+
+- p_y:
+
+  y position for package name
+
+- s_size:
+
+  Convenience argument for controlled both `s_height` and `s_width` at
+  the same time.
+
+- s_x:
+
+  x position for subplot
+
+- s_y:
+
+  y position for subplot
+
+- s_height:
+
+  height for subplot
+
+- s_width:
+
+  width for subplot
+
+- h_fill:
+
+  color to fill hexagon
+
+- h_color:
+
+  color for hexagon border
+
+- spotlight:
+
+  whether add spotlight
+
+- l_alpha:
+
+  maximum alpha for spotlight
+
+- l_width:
+
+  width for spotlight
+
+- dpi:
+
+  plot resolution
+
+- seed:
+
+  Random seed to make point coordinates reproducible (only relevant when
+  `new_coords=TRUE`).
+
+## Value
+
+Spooky ggplot

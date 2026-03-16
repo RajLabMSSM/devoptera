@@ -1,0 +1,184 @@
+# Session info
+
+![](https://github.com/RajLabMSSM/devoptera/raw/master/inst/hex/hex.png "Hex sticker for devoptera")\
+[![License:
+GPL-3](https://img.shields.io/badge/license-GPL--3-blue.svg)](https://cran.r-project.org/web/licenses/GPL-3)
+[![](https://img.shields.io/badge/doi-10.1093/bioinformatics/btab658-blue.svg)](https://doi.org/10.1093/bioinformatics/btab658)
+[![](https://img.shields.io/badge/devel%20version-1.0.0-black.svg)](https://github.com/RajLabMSSM/devoptera)
+[![](https://img.shields.io/github/languages/code-size/RajLabMSSM/devoptera.svg)](https://github.com/RajLabMSSM/devoptera)
+[![](https://img.shields.io/github/last-commit/RajLabMSSM/devoptera.svg)](https://github.com/RajLabMSSM/devoptera/commits/master)\
+[![R build
+status](https://github.com/RajLabMSSM/devoptera/workflows/rworkflows/badge.svg)](https://github.com/RajLabMSSM/devoptera/actions)
+[![](https://codecov.io/gh/RajLabMSSM/devoptera/branch/master/graph/badge.svg)](https://app.codecov.io/gh/RajLabMSSM/devoptera)\
+[![](https://codecov.io/gh/RajLabMSSM/devoptera/branch/master/graphs/icicle.svg "Codecov icicle graph")](https://app.codecov.io/gh/RajLabMSSM/devoptera/tree/master)\
+
+#### \
+Authors: *Brian Schilder*\
+
+## `devoptera`: Echoverse module: Practical tools for R developers.
+
+This R package is part of the *echoverse* suite that supports
+[`echolocatoR`](https://github.com/RajLabMSSM/echolocatoR): an automated
+genomic fine-mapping pipeline.
+
+If you use `devoptera`, please cite:
+
+> Brian M Schilder, Jack Humphrey, Towfique Raj (2021). echolocatoR: an
+> automated end-to-end statistical and functional genomic fine-mapping
+> pipeline. Bioinformatics, btab658.
+> <https://doi.org/10.1093/bioinformatics/btab658>
+
+## Installation
+
+``` r
+
+if(!require("BiocManager")) install.packages("BiocManager")
+
+BiocManager::install("RajLabMSSM/devoptera")
+library(devoptera)
+```
+
+## Documentation
+
+### [Website](https://rajlabmssm.github.io/devoptera)
+
+### [Get started](https://rajlabmssm.github.io/devoptera/articles/devoptera)
+
+## Name
+
+**❓🦇❓ So what does `devoptera` mean, anyways?** (click to find out)
+
+[**DevOps**](https://en.wikipedia.org/wiki/DevOps) is a software
+engineering methodology that is itself an amalgam of software
+**Dev**lopment and IT **Op**eration**s**.
+
+**Chiroptera** is a the name of the phylogenetic order to which bats
+belong. `devoptera` is part of the broader *echoverse* suite that
+supports [`echolocatoR`](https://github.com/RajLabMSSM/echolocatoR), and
+`echolocatoR` is an R package that facilitates fine-mapping to pinpoint
+causal genetic variants underlying complex traits.
+
+You know, like bats do (kind of). 🦗〰️🦇
+
+------------------------------------------------------------------------
+
+## Contact
+
+[Brian M. Schilder, Bioinformatician
+II](https://bschilder.github.io/BMSchilder/)\
+[Raj Lab](https://rajlab.org)\
+[Department of Neuroscience, Icahn School of Medicine at Mount
+Sinai](https://icahn.mssm.edu/about/departments-offices/neuroscience)
+
+``` r
+
+devoptera::session_info()
+```
+
+``` R
+##  [1m [36m─ Session info ─────────────────────────────────────────────────────────────── [39m [22m
+##   [3m [90msetting  [39m [23m  [3m [90mvalue [39m [23m
+##  version  R Under development (unstable) (2026-03-12 r89607)
+##  os       Ubuntu 24.04.4 LTS
+##  system   x86_64, linux-gnu
+##  ui       X11
+##  language (EN)
+##  collate  en_US.UTF-8
+##  ctype    en_US.UTF-8
+##  tz       UTC
+##  date     2026-03-16
+##  pandoc   3.9 @ /usr/bin/ (via rmarkdown)
+##  quarto   1.8.27 @ /usr/local/bin/quarto
+## 
+##  [1m [36m─ Packages ─────────────────────────────────────────────────────────────────── [39m [22m
+##   [3m [90mpackage       [39m [23m  [3m [90m* [39m [23m  [3m [90mversion    [39m [23m  [3m [90mdate (UTC) [39m [23m  [3m [90mlib [39m [23m  [3m [90msource [39m [23m
+##  badger          0.2.5       [90m2025-07-31 [39m  [90m[1] [39m  [90mCRAN (R 4.6.0) [39m
+##  Biobase         2.71.0      [90m2025-10-30 [39m  [90m[1] [39m  [90mBioconductor 3.23 (R 4.6.0) [39m
+##  BiocBaseUtils   1.13.0      [90m2025-10-30 [39m  [90m[1] [39m  [90mBioconductor 3.23 (R 4.6.0) [39m
+##  BiocCheck       1.47.18     [90m2026-02-03 [39m  [90m[1] [39m  [90mBioconductor 3.23 (R 4.6.0) [39m
+##  BiocFileCache   3.1.0       [90m2025-10-30 [39m  [90m[1] [39m  [90mBioconductor 3.23 (R 4.6.0) [39m
+##  BiocGenerics    0.57.0      [90m2025-10-30 [39m  [90m[1] [39m  [90mBioconductor 3.23 (R 4.6.0) [39m
+##  BiocManager     1.30.27     [90m2025-11-14 [39m  [90m[1] [39m  [90mCRAN (R 4.6.0) [39m
+##  biocViews       1.79.3      [90m2026-02-25 [39m  [90m[1] [39m  [90mBioconductor 3.23 (R 4.6.0) [39m
+##  bit             4.6.0       [90m2025-03-06 [39m  [90m[1] [39m  [90mCRAN (R 4.6.0) [39m
+##  bit64           4.6.0-1     [90m2025-01-16 [39m  [90m[1] [39m  [90mCRAN (R 4.6.0) [39m
+##  bitops          1.0-9       [90m2024-10-03 [39m  [90m[1] [39m  [90mCRAN (R 4.6.0) [39m
+##  blob            1.3.0       [90m2026-01-14 [39m  [90m[1] [39m  [90mCRAN (R 4.6.0) [39m
+##  cachem          1.1.0       [90m2024-05-16 [39m  [90m[2] [39m  [90mCRAN (R 4.6.0) [39m
+##  cli             3.6.5       [90m2025-04-23 [39m  [90m[2] [39m  [90mCRAN (R 4.6.0) [39m
+##  codetools       0.2-20      [90m2024-03-31 [39m  [90m[3] [39m  [90mCRAN (R 4.6.0) [39m
+##  curl            7.0.0       [90m2025-08-19 [39m  [90m[2] [39m  [90mCRAN (R 4.6.0) [39m
+##  data.table      1.18.2.1    [90m2026-01-27 [39m  [90m[1] [39m  [90mCRAN (R 4.6.0) [39m
+##  DBI             1.3.0       [90m2026-02-25 [39m  [90m[1] [39m  [90mCRAN (R 4.6.0) [39m
+##  dbplyr          2.5.2       [90m2026-02-13 [39m  [90m[1] [39m  [90mCRAN (R 4.6.0) [39m
+##  desc            1.4.3       [90m2023-12-10 [39m  [90m[2] [39m  [90mCRAN (R 4.6.0) [39m
+##  devoptera       1.0.0       [90m2026-03-16 [39m  [90m[1] [39m  [90mBioconductor [39m
+##  devtools        2.4.6       [90m2025-10-03 [39m  [90m[2] [39m  [90mCRAN (R 4.6.0) [39m
+##  digest          0.6.39      [90m2025-11-19 [39m  [90m[2] [39m  [90mCRAN (R 4.6.0) [39m
+##  dlstats         0.1.7       [90m2023-05-24 [39m  [90m[1] [39m  [90mCRAN (R 4.6.0) [39m
+##  dplyr           1.2.0       [90m2026-02-03 [39m  [90m[1] [39m  [90mCRAN (R 4.6.0) [39m
+##  ellipsis        0.3.2       [90m2021-04-29 [39m  [90m[2] [39m  [90mCRAN (R 4.6.0) [39m
+##  evaluate        1.0.5       [90m2025-08-27 [39m  [90m[2] [39m  [90mCRAN (R 4.6.0) [39m
+##  farver          2.1.2       [90m2024-05-13 [39m  [90m[1] [39m  [90mCRAN (R 4.6.0) [39m
+##  fastmap         1.2.0       [90m2024-05-15 [39m  [90m[2] [39m  [90mCRAN (R 4.6.0) [39m
+##  filelock        1.0.3       [90m2023-12-11 [39m  [90m[1] [39m  [90mCRAN (R 4.6.0) [39m
+##  fs              1.6.7       [90m2026-03-06 [39m  [90m[2] [39m  [90mCRAN (R 4.6.0) [39m
+##  generics        0.1.4       [90m2025-05-09 [39m  [90m[1] [39m  [90mCRAN (R 4.6.0) [39m
+##  ggplot2         4.0.2       [90m2026-02-03 [39m  [90m[1] [39m  [90mCRAN (R 4.6.0) [39m
+##  glue            1.8.0       [90m2024-09-30 [39m  [90m[2] [39m  [90mCRAN (R 4.6.0) [39m
+##  graph           1.89.1      [90m2025-12-02 [39m  [90m[1] [39m  [90mBioconductor 3.23 (R 4.6.0) [39m
+##  gtable          0.3.6       [90m2024-10-25 [39m  [90m[1] [39m  [90mCRAN (R 4.6.0) [39m
+##  here            1.0.2       [90m2025-09-15 [39m  [90m[1] [39m  [90mCRAN (R 4.6.0) [39m
+##  htmltools       0.5.9       [90m2025-12-04 [39m  [90m[2] [39m  [90mCRAN (R 4.6.0) [39m
+##  httr2           1.2.2       [90m2025-12-08 [39m  [90m[2] [39m  [90mCRAN (R 4.6.0) [39m
+##  jsonlite        2.0.0       [90m2025-03-27 [39m  [90m[2] [39m  [90mCRAN (R 4.6.0) [39m
+##  knitr           1.51        [90m2025-12-20 [39m  [90m[2] [39m  [90mCRAN (R 4.6.0) [39m
+##  lifecycle       1.0.5       [90m2026-01-08 [39m  [90m[2] [39m  [90mCRAN (R 4.6.0) [39m
+##  magrittr        2.0.4       [90m2025-09-12 [39m  [90m[2] [39m  [90mCRAN (R 4.6.0) [39m
+##  memoise         2.0.1       [90m2021-11-26 [39m  [90m[2] [39m  [90mCRAN (R 4.6.0) [39m
+##  otel            0.2.0       [90m2025-08-29 [39m  [90m[2] [39m  [90mCRAN (R 4.6.0) [39m
+##  pillar          1.11.1      [90m2025-09-17 [39m  [90m[2] [39m  [90mCRAN (R 4.6.0) [39m
+##  pkgbuild        1.4.8       [90m2025-05-26 [39m  [90m[2] [39m  [90mCRAN (R 4.6.0) [39m
+##  pkgconfig       2.0.3       [90m2019-09-22 [39m  [90m[2] [39m  [90mCRAN (R 4.6.0) [39m
+##  pkgload         1.5.0       [90m2026-02-03 [39m  [90m[2] [39m  [90mCRAN (R 4.6.0) [39m
+##  purrr           1.2.1       [90m2026-01-09 [39m  [90m[2] [39m  [90mCRAN (R 4.6.0) [39m
+##  R.methodsS3     1.8.2       [90m2022-06-13 [39m  [90m[1] [39m  [90mCRAN (R 4.6.0) [39m
+##  R.oo            1.27.1      [90m2025-05-02 [39m  [90m[1] [39m  [90mCRAN (R 4.6.0) [39m
+##  R.utils         2.13.0      [90m2025-02-24 [39m  [90m[1] [39m  [90mCRAN (R 4.6.0) [39m
+##  R6              2.6.1       [90m2025-02-15 [39m  [90m[2] [39m  [90mCRAN (R 4.6.0) [39m
+##  rappdirs        0.3.4       [90m2026-01-17 [39m  [90m[2] [39m  [90mCRAN (R 4.6.0) [39m
+##  RBGL            1.87.0      [90m2025-10-30 [39m  [90m[1] [39m  [90mBioconductor 3.23 (R 4.6.0) [39m
+##  RColorBrewer    1.1-3       [90m2022-04-03 [39m  [90m[1] [39m  [90mCRAN (R 4.6.0) [39m
+##  RCurl           1.98-1.17   [90m2025-03-22 [39m  [90m[1] [39m  [90mCRAN (R 4.6.0) [39m
+##  remotes          [1m [35m2.5.0.9000 [39m [22m  [90m2026-03-13 [39m  [90m[1] [39m  [1m [35mGithub (r-lib/remotes@6c988cc) [39m [22m
+##  renv            1.1.8       [90m2026-03-05 [39m  [90m[1] [39m  [90mCRAN (R 4.6.0) [39m
+##  rlang           1.1.7       [90m2026-01-09 [39m  [90m[2] [39m  [90mCRAN (R 4.6.0) [39m
+##  rmarkdown     * 2.30        [90m2025-09-28 [39m  [90m[1] [39m  [90mCRAN (R 4.6.0) [39m
+##  rprojroot       2.1.1       [90m2025-08-26 [39m  [90m[2] [39m  [90mCRAN (R 4.6.0) [39m
+##  RSQLite         2.4.6       [90m2026-02-06 [39m  [90m[1] [39m  [90mCRAN (R 4.6.0) [39m
+##  rstudioapi      0.18.0      [90m2026-01-16 [39m  [90m[2] [39m  [90mCRAN (R 4.6.0) [39m
+##  RUnit           0.4.33.1    [90m2025-06-17 [39m  [90m[1] [39m  [90mCRAN (R 4.6.0) [39m
+##  rvcheck         0.2.1       [90m2021-10-22 [39m  [90m[1] [39m  [90mCRAN (R 4.6.0) [39m
+##  rworkflows    * 1.0.8       [90m2026-03-13 [39m  [90m[1] [39m  [1m [35mGithub (neurogenomics/rworkflows@6d3616f) [39m [22m
+##  S7              0.2.1       [90m2025-11-14 [39m  [90m[1] [39m  [90mCRAN (R 4.6.0) [39m
+##  scales          1.4.0       [90m2025-04-24 [39m  [90m[1] [39m  [90mCRAN (R 4.6.0) [39m
+##  sessioninfo     1.2.3       [90m2025-02-05 [39m  [90m[2] [39m  [90mCRAN (R 4.6.0) [39m
+##  stringdist      0.9.17      [90m2026-01-16 [39m  [90m[1] [39m  [90mCRAN (R 4.6.0) [39m
+##  tibble          3.3.1       [90m2026-01-11 [39m  [90m[2] [39m  [90mCRAN (R 4.6.0) [39m
+##  tidyselect      1.2.1       [90m2024-03-11 [39m  [90m[1] [39m  [90mCRAN (R 4.6.0) [39m
+##  usethis         3.2.1       [90m2025-09-06 [39m  [90m[2] [39m  [90mCRAN (R 4.6.0) [39m
+##  vctrs           0.7.1       [90m2026-01-23 [39m  [90m[2] [39m  [90mCRAN (R 4.6.0) [39m
+##  xfun            0.56        [90m2026-01-18 [39m  [90m[2] [39m  [90mCRAN (R 4.6.0) [39m
+##  XML             3.99-0.22   [90m2026-02-10 [39m  [90m[1] [39m  [90mCRAN (R 4.6.0) [39m
+##  yaml            2.3.12      [90m2025-12-10 [39m  [90m[2] [39m  [90mCRAN (R 4.6.0) [39m
+##  yulab.utils     0.2.4       [90m2026-02-02 [39m  [90m[1] [39m  [90mCRAN (R 4.6.0) [39m
+## 
+##  [90m [1] /__w/_temp/Library [39m
+##  [90m [2] /usr/local/lib/R/site-library [39m
+##  [90m [3] /usr/local/lib/R/library [39m
+##   [41m [37m* [39m [49m ── Packages attached to the search path.
+## 
+##  [1m [36m────────────────────────────────────────────────────────────────────────────── [39m [22m
+```
+
+------------------------------------------------------------------------

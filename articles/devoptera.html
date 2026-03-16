@@ -4,86 +4,104 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Get started • devoptera</title>
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
-<script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><meta property="og:title" content="Get started">
-<!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+<script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
+<link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
+<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Get started">
+<style>
+.navbar {
+  background-color: #162038 !important;
+  border-bottom: 2px solid #4ecdc4;
+}
+.navbar-brand, .nav-link { color: #e8f4f4 !important; }
+.nav-link:hover { color: #2ee8d6 !important; }
+.nav-link.active { color: #2ee8d6 !important; border-bottom: 2px solid #2ee8d6; }
+pre {
+  background-color: #d6e4ee !important;
+  color: #1a2744 !important;
+  border: none !important;
+  border-radius: 12px;
+  margin: 0;
+  padding: 0.8em 1em;
+}
+code { color: #1a6b68 !important; border: none !important; }
+pre code { color: #1a2744 !important; border: none !important; background: transparent !important; }
+pre code span { border: none !important; background: transparent !important; }
+.table { color: #e8f4f4 !important; }
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  background-color: rgba(78, 205, 196, 0.05) !important;
+  color: #e8f4f4 !important;
+}
+.table-striped > tbody > tr:nth-of-type(even) > * {
+  background-color: transparent !important;
+  color: #e8f4f4 !important;
+}
+.table > thead { border-bottom: 2px solid #4ecdc4; }
+h1, h2, h3, h4, h5, h6 { color: #4ecdc4 !important; }
+a { color: #5bc0be; }
+a:hover { color: #2ee8d6; }
+.card { background-color: #1e3050; border-color: #2a4060; }
+.footer { background-color: #162038 !important; border-top: 1px solid #2a4060; }
+.page-header { border-bottom: 2px solid #3a8d8c; }
+.sourceCode {
+  background-color: #d6e4ee !important;
+  border: 1px solid #3a8d8c;
+  border-radius: 12px !important;
+  overflow: hidden;
+}
+.sourceCode code span,
+.sourceCode code a {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+</style>
 </head>
-<body data-spy="scroll" data-target="#toc">
+<body>
+    <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
 
 
-    <div class="container template-article">
-      <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <span class="navbar-brand">
-        <a class="navbar-link" href="../index.html">devoptera</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.0.0</span>
-      </span>
-    </div>
+    <nav class="navbar navbar-expand-lg fixed-top bg-light" data-bs-theme="light" aria-label="Site navigation"><div class="container">
 
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-<li>
-  <a href="../articles/devoptera.html">Get started</a>
-</li>
-<li>
-  <a href="../reference/index.html">Reference</a>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Articles
+    <a class="navbar-brand me-2" href="../index.html">devoptera</a>
 
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-<li>
-      <a href="../articles/docker.html">Docker/Singularity Containers</a>
-    </li>
-    <li>
-      <a href="../articles/make_hex.html">echoverse hex stickers</a>
-    </li>
-  </ul>
-</li>
-<li>
-  <a href="../news/index.html">Changelog</a>
-</li>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0</small>
+
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar" class="collapse navbar-collapse ms-3">
+      <ul class="navbar-nav me-auto">
+<li class="active nav-item"><a class="nav-link" href="../articles/devoptera.html">Get started</a></li>
+<li class="nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
+<li class="nav-item"><a class="nav-link" href="../articles/index.html">Articles</a></li>
+<li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul>
-<ul class="nav navbar-nav navbar-right">
-<li>
-  <a href="https://github.com/RajLabMSSM/devoptera/" class="external-link">
-    <span class="fab fa-github fa-lg"></span>
-
-  </a>
-</li>
+<ul class="navbar-nav">
+<li class="nav-item"><form class="form-inline" role="search">
+ <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json">
+</form></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://github.com/RajLabMSSM/devoptera"><span class="fa fa-github"></span></a></li>
       </ul>
 </div>
-<!--/.nav-collapse -->
+
+
   </div>
-<!--/.container -->
-</div>
-<!--/.navbar -->
+</nav><div class="container template-article">
 
 
 
-      </header><div class="row">
-  <div class="col-md-9 contents">
-    <div class="page-header toc-ignore">
-      <h1 data-toc-skip>Get started</h1>
+
+<div class="row">
+  <main id="main" class="col-md-9"><div class="page-header">
+
+      <h1>Get started</h1>
                         <h4 data-toc-skip class="author"><h4>
 <br>
 Authors: <i>Brian Schilder</i><br>
@@ -91,12 +109,11 @@ Authors: <i>Brian Schilder</i><br>
             
             <h4 data-toc-skip class="date"><h4>
 <br>
-Vignette updated: <i>Mar-15-2026</i><br>
+Vignette updated: <i>Mar-16-2026</i><br>
 </h4></h4>
       
       <small class="dont-index">Source: <a href="https://github.com/RajLabMSSM/devoptera/blob/master/vignettes/devoptera.Rmd" class="external-link"><code>vignettes/devoptera.Rmd</code></a></small>
-      <div class="hidden name"><code>devoptera.Rmd</code></div>
-
+      <div class="d-none name"><code>devoptera.Rmd</code></div>
     </div>
 
     
@@ -116,8 +133,8 @@ accelerate your R package development workflow.</p>
 to have access to them all without having to write out the
 <code>pkg:::internal_func</code> notation. You can source all the
 functions at once by running <code><a href="../reference/source_all.html">devoptera::source_all</a></code>.</p>
-<p>Thus function can also load any R packages you need by supplying the
-package names to the</p>
+<p>This function can also load any R packages you need by supplying the
+package names to the <code>packages</code> argument.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">devoptera</span><span class="fu">::</span><span class="fu"><a href="../reference/source_all.html">source_all</a></span><span class="op">(</span>packages <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"rlang"</span>,<span class="st">"data.table"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## Loading required package: rlang</span></span></code></pre>
@@ -137,32 +154,32 @@ package names to the</p>
 <code>args2vars</code><a class="anchor" aria-label="anchor" href="#args2vars"></a>
 </h3>
 <p>As a developer, how often do you find yourself realizing there’s a
-bug somewhere inside your function. You could:</p>
+bug somewhere inside your function? You could:</p>
 <ul>
 <li>
-<strong><code>Strategy 2</code>: Edit –&gt; Rebuild –&gt;
-Repeat</strong>: Make a change to the code, rebuild the package, and
-rerun the function as a whole. This most closely mimics how it will run
-in production, but is extremely slow when iterating this edit-rebuild
-process many, many times over.</li>
+<strong>Strategy 1: Edit –&gt; Rebuild –&gt; Repeat</strong>: Make a
+change to the code, rebuild the package, and rerun the function as a
+whole. This most closely mimics how it will run in production, but is
+extremely slow when iterating this edit-rebuild process many, many times
+over.</li>
 <li>
-<strong><code>Strategy 2</code>:Run internal code
-line-by-line</strong>: Alternatively, you could go within your function,
-run one line of code at a time and inspect the variables it produces at
-each step. This is much faster than guessing whether your changes fixed
-the bug and rebuilding each time to find out whether they worked. But in
-order to do this, you first need to initialise each argument in your
-function as a global variable so that you can run the code line-by-line.
-But your function has many arguments, so now you spend the next
-minute(s) tediously making each argument into a variable of the same
-name (using the defaults as the assigned values).</li>
+<strong>Strategy 2: Run internal code line-by-line</strong>:
+Alternatively, you could go within your function, run one line of code
+at a time and inspect the variables it produces at each step. This is
+much faster than guessing whether your changes fixed the bug and
+rebuilding each time to find out whether they worked. But in order to do
+this, you first need to initialise each argument in your function as a
+global variable so that you can run the code line-by-line. But your
+function has many arguments, so now you spend the next minute(s)
+tediously making each argument into a variable of the same name (using
+the defaults as the assigned values).</li>
 </ul>
-<p><code><a href="../reference/args2vars.html">devoptera::args2vars</a></code> automates <code>Strategy 2</code>
-by first running <code>source_all</code> (from previous example) and
-then automatically assigning each of your function’s arguments as global
-variables in your R environment. Voila! No more tedious argument
-defining, allowing you to rapidly debug your code before going to
-rebuild the entire package.</p>
+<p><code><a href="../reference/args2vars.html">devoptera::args2vars</a></code> automates <strong>Strategy
+2</strong> by first running <code>source_all</code> (from previous
+example) and then automatically assigning each of your function’s
+arguments as global variables in your R environment. No more tedious
+argument defining, allowing you to rapidly debug your code before going
+to rebuild the entire package.</p>
 <div class="section level4">
 <h4 id="define-a-function">Define a function<a class="anchor" aria-label="anchor" href="#define-a-function"></a>
 </h4>
@@ -205,7 +222,7 @@ assigned value.</p>
 <h4 id="clear">Clear<a class="anchor" aria-label="anchor" href="#clear"></a>
 </h4>
 <p>Remove all variables using <code><a href="../reference/rma.html">devoptera::rma()</a></code>, or by
-clicking the little broom :broom: in the upper right of your
+clicking the little broom in the upper right of your
 <code>Environment</code> panel in RStudio.</p>
 <p>This is important as it will ensure that the names of
 functions/variables in your global environment (created with
@@ -218,14 +235,13 @@ step).</p>
 <div class="section level4">
 <h4 id="reinstall">Reinstall<a class="anchor" aria-label="anchor" href="#reinstall"></a>
 </h4>
-<p>(Re)install your package with <code><a href="https://bioconductor.github.io/BiocManager/reference/install.html" class="external-link">devoptera::install</a></code>
-(imported directly from <code><a href="https://devtools.r-lib.org/reference/install.html" class="external-link">devtools::install</a></code>), or by clicking
-the <code>Install</code> button within the <code>Build</code> panel in
-RStudio.</p>
-<p>This function is equivalent to the keystrokes
+<p>(Re)install your package with <code><a href="https://devtools.r-lib.org/reference/install.html" class="external-link">devtools::install()</a></code>, or by
+clicking the <code>Install</code> button within the <code>Build</code>
+panel in RStudio.</p>
+<p>This is equivalent to the keystrokes
 <code>CMD</code>+<code>SHIFT</code>+<code>B</code> within RStudio.</p>
 <div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://bioconductor.github.io/BiocManager/reference/install.html" class="external-link">install</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/install.html" class="external-link">install</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level4">
 <h4 id="check">Check<a class="anchor" aria-label="anchor" href="#check"></a>
@@ -236,21 +252,21 @@ runs as expected.</p>
 <h5 id="cran-checks">
 <a href="https://cran.r-project.org/" class="external-link">CRAN</a> checks<a class="anchor" aria-label="anchor" href="#cran-checks"></a>
 </h5>
-<p>This <code>check</code> function is directly imported from
-<code>r</code>BiocStyle::CRANpkg(‘devtools’)`.</p>
-<p>This function is equivalent to the keystrokes
+<p>The <code>check</code> function from <em><a href="https://CRAN.R-project.org/package=devtools" class="external-link">devtools</a></em>
+runs <code>R CMD check</code> on your package.</p>
+<p>This is equivalent to the keystrokes
 <code>CMD</code>+<code>SHIFT</code>+<code>E</code> within RStudio.</p>
 <div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">check</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/check.html" class="external-link">check</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level5">
 <h5 id="bioconductor-checks">
 <a href="https://bioconductor.org/" class="external-link">Bioconductor</a> checks<a class="anchor" aria-label="anchor" href="#bioconductor-checks"></a>
 </h5>
-<p>This <code>BiocCheck</code> function is directly imported from
-<code>r</code>Biocpkg::CRANpkg(‘BiocCheck’)`.</p>
+<p>The <code>BiocCheck</code> function from <em><a href="https://bioconductor.org/packages/3.23/BiocCheck" class="external-link">BiocCheck</a></em>
+runs additional Bioconductor-specific checks.</p>
 <div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">BiocCheck</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">BiocCheck</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/BiocCheck/man/BiocCheck.html" class="external-link">BiocCheck</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p>If you still run into some bugs or unexpected behaviour, don’t worry!
 You can still easily go back and repeat this process until everything is
 working smoothly.</p>
@@ -268,7 +284,7 @@ working smoothly.</p>
 situations. Not only does it clear your variables, it unloads all
 packages which is necessary when you want to use a package you just
 installed a new version of.</p>
-<p>This function is equivalent to the keystrokes
+<p>This is equivalent to the keystrokes
 <code>CMD</code>+<code>SHIFT</code>+<code>0</code> within RStudio.</p>
 <div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">devoptera</span><span class="fu">::</span><span class="fu"><a href="../reference/restart.html">restart</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
@@ -295,7 +311,7 @@ particularly long.</p>
 <span><span class="co">##  collate  en_US.UTF-8</span></span>
 <span><span class="co">##  ctype    en_US.UTF-8</span></span>
 <span><span class="co">##  tz       UTC</span></span>
-<span><span class="co">##  date     2026-03-15</span></span>
+<span><span class="co">##  date     2026-03-16</span></span>
 <span><span class="co">##  pandoc   3.9 @ /usr/bin/ (via rmarkdown)</span></span>
 <span><span class="co">##  quarto   1.8.27 @ /usr/local/bin/quarto</span></span>
 <span><span class="co">## </span></span>
@@ -323,7 +339,7 @@ particularly long.</p>
 <span><span class="co">##  DBI             1.3.0      <span style="color: #555555;">2026-02-25</span> <span style="color: #555555;">[1]</span> <span style="color: #555555;">CRAN (R 4.6.0)</span></span></span>
 <span><span class="co">##  dbplyr          2.5.2      <span style="color: #555555;">2026-02-13</span> <span style="color: #555555;">[1]</span> <span style="color: #555555;">CRAN (R 4.6.0)</span></span></span>
 <span><span class="co">##  desc            1.4.3      <span style="color: #555555;">2023-12-10</span> <span style="color: #555555;">[2]</span> <span style="color: #555555;">CRAN (R 4.6.0)</span></span></span>
-<span><span class="co">##  devoptera     * 1.0.0      <span style="color: #555555;">2026-03-15</span> <span style="color: #555555;">[1]</span> <span style="color: #555555;">Bioconductor</span></span></span>
+<span><span class="co">##  devoptera     * 1.0.0      <span style="color: #555555;">2026-03-16</span> <span style="color: #555555;">[1]</span> <span style="color: #555555;">Bioconductor</span></span></span>
 <span><span class="co">##  devtools        2.4.6      <span style="color: #555555;">2025-10-03</span> <span style="color: #555555;">[2]</span> <span style="color: #555555;">CRAN (R 4.6.0)</span></span></span>
 <span><span class="co">##  digest          0.6.39     <span style="color: #555555;">2025-11-19</span> <span style="color: #555555;">[2]</span> <span style="color: #555555;">CRAN (R 4.6.0)</span></span></span>
 <span><span class="co">##  dplyr           1.2.0      <span style="color: #555555;">2026-02-03</span> <span style="color: #555555;">[1]</span> <span style="color: #555555;">CRAN (R 4.6.0)</span></span></span>
@@ -388,29 +404,22 @@ particularly long.</p>
 <span><span class="co">## <span style="color: #00BBBB; font-weight: bold;">──────────────────────────────────────────────────────────────────────────────</span></span></span></code></pre>
 </details><hr>
 </div>
-  </div>
-
-  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
-
-      </div>
-
+  </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
+    </nav></aside>
 </div>
 
 
 
-      <footer><div class="copyright">
-  <p></p>
-<p>Developed by Brian Schilder.</p>
+    <footer><div class="pkgdown-footer-left">
+  <p>Developed by Brian Schilder.</p>
 </div>
 
-<div class="pkgdown">
-  <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
+<div class="pkgdown-footer-right">
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
-      </footer>
+    </footer>
 </div>
-
 
 
 
