@@ -43,3 +43,5 @@ vignettes/*.R
 .Renviron
 *.tbi
 Rplots.pdf
+/doc/
+/Meta/
